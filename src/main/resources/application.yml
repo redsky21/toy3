@@ -3,12 +3,12 @@ spring:
     active: local
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://redsky21.duckdns.org:3306/boot_db
-    username: boot
-    password: chae212121!
+    url: jdbc:mariadb://redsky22.duckdns.org:13306/jpa_db
+    username: jpa_user
+    password: jpa_user
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: none
     properties:
       hibernate:
         #        format_sql: true

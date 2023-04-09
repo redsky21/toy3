@@ -7,6 +7,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -20,7 +21,7 @@ public class WorkPlanService {
             return objectMapper.convertValue(workPlan, WorkPlanDTO.class);
 
         })).toList();
-        List<WorkPlan> returnList2 = workPlanRepository.findInprocessCount();
+        List<WorkPlan> returnList2 = workPlanRepository.findInprocessCount(LocalDate.now());
         return returnList;
     }
 

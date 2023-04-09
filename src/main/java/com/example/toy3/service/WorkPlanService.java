@@ -1,5 +1,6 @@
 package com.example.toy3.service;
 
+import com.example.toy3.entity.WorkPlan;
 import com.example.toy3.model.WorkPlanDTO;
 import com.example.toy3.repository.WorkPlanRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -19,6 +20,7 @@ public class WorkPlanService {
             return objectMapper.convertValue(workPlan, WorkPlanDTO.class);
 
         })).toList();
+        List<WorkPlan> returnList2 = workPlanRepository.findInprocessCount();
         return returnList;
     }
 

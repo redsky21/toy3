@@ -15,8 +15,6 @@ import java.time.LocalDate;
 @RequiredArgsConstructor
 @AllArgsConstructor
 public class WorkPlanDTO {
-    @Id
-    @GeneratedValue
     private Long rowNum;
     private String level1;
     private String level2;

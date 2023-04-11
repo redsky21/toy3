@@ -39,7 +39,7 @@ jobs:
           port: 3333
           # Find the PID of the running Spring Boot process and kill it
           script: |
-            PID=$(pgrep -f toy3-0.0.1-SNAPSHOT.jar)
+            PID=$(pgrep -f target/toy3-0.0.1-SNAPSHOT.jar)
             if [ -n "$PID" ]; then
               echo "Stopping running process with PID $PID"
               kill "$PID"

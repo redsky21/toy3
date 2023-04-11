@@ -44,7 +44,7 @@ jobs:
             PID=$(pgrep -f "java.*toy3-0.0.1-SNAPSHOT.jar | grep -v "$CURRENT_PID"")
             echo "PID: $PID"
             echo "Current PID: $$"
-            if [ -n "$PID" ]; then
+            if [ -n "$PID" ] && [ "$PID" != "$CURRENT_PID" ]; then
               for p in $PID; do
                 echo "Stopping running process with PID $p"
                 kill $p

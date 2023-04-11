@@ -28,7 +28,7 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           port: 3333
           source: target/toy3-0.0.1-SNAPSHOT.jar
-          target: /home/ubuntu
+          target: /home/boot
 
       - name: Stop Spring Boot Application
         uses: appleboy/ssh-action@master
@@ -55,5 +55,5 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           port: 3333
           script: |
-            cd /home/ubuntu
+            cd /home/boot
             nohup java -jar toy3-0.0.1-SNAPSHOT.jar > /dev/null 2>&1 &

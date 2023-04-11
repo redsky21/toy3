@@ -21,7 +21,7 @@ public class WorkPlanService {
             return objectMapper.convertValue(workPlan, WorkPlanDTO.class);
 
         })).toList();
-//        List<WorkPlan> returnList2 = workPlanRepository.findInprocessCount(LocalDate.now());
+        List<WorkPlan> returnList2 = workPlanRepository.findInprocessCount(LocalDate.now());
         return returnList;
     }
 

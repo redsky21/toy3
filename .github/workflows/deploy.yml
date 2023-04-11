@@ -41,8 +41,7 @@ jobs:
           script: |
             PATTERN="toy3-0.0.1-SNAPSHOT.jar"
             CURRENT_PID=$$
-            echo "Other PIDs: $OTHER_PID"
-            PID=$(pgrep -f "$PATTERN" -v "$CURRENT_PID")
+            PID=$(pgrep -f "$PATTERN" | grep -v "$CURRENT_PID")
             echo "PID: $PID"
             echo "Current PID: $$"
             if [ -n "$PID" ]; then

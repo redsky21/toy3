@@ -41,15 +41,14 @@ jobs:
           script: |
             PATTERN="toy3-0.0.1-SNAPSHOT.jar"
             CURRENT_PID=$$
-            PID=$(pgrep -f "$PATTERN" | grep -v "$CURRENT_PID")
+            PID=$(pgrep -f "java.*toy3-0.0.1-SNAPSHOT.jar")
             echo "PID: $PID"
             echo "Current PID: $$"
             if [ -n "$PID" ]; then
               for p in $PID; do
-                echo "Stopping running process with PID $P"
+                echo "Stopping running process with PID $p"
                 kill $p
-              done
-              
+              done              
             else
               echo "No running process found"
             fi

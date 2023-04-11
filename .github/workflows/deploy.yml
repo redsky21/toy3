@@ -55,5 +55,5 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           port: 3333
           script: |
-            cd /home/boot
+            cd /home/boot/target
             nohup java -jar toy3-0.0.1-SNAPSHOT.jar > /dev/null 2>&1 &

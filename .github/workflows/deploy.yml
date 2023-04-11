@@ -46,9 +46,11 @@ jobs:
             echo "Current PID: $$"
             if [ -n "$PID" ] && [ "$PID" != "$CURRENT_PID" ]; then
               for p in $PID; do
-                echo "Stopping running process with PID $p"
-                kill $p
-              done              
+                if[ "$PID" != "$CURRENT_PID" ]; then
+                  echo "Stopping running process with PID $p"
+                  kill $p
+                  done
+                fi
             else
               echo "No running process found"
             fi

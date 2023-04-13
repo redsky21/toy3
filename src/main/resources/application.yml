@@ -87,7 +87,7 @@ spring:
 #        one-indexed-parameters: true # Pageable page ? 0?? ???? 1?????? true:1 false:0) ???? ??
 logging:
   level:
-    org.hibernate.SQL: debug
-    com:
-      example:
-        springjpastudy: debug
+    root: INFO
+    com.example: DEBUG
+    file:
+      name: /var/log/springboot.log

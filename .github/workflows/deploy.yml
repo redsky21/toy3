@@ -65,4 +65,4 @@ jobs:
           script: |
             cd /home/boot
             cd target
-            nohup java -jar toy3-0.0.1-SNAPSHOT.jar > /dev/null 2>&1 &
+            nohup java -jar toy3-0.0.1-SNAPSHOT.jar --spring.profiles.active=prod > /dev/null 2>&1 &

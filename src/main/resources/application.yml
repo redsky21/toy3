@@ -90,4 +90,4 @@ logging:
     root: INFO
     com.example: DEBUG
     file:
-      name: /var/log/springboot.log
+      name: /home/boot/log/springboot.log

@@ -67,7 +67,7 @@ spring:
     driver-class-name: org.mariadb.jdbc.Driver
     #    url: jdbc:mariadb://redsky22.duckdns.org:13306/jpa_db
 #    url: jdbc:mariadb://192.168.219.161:13306/jpa_db
-    url: jdbc:mariadb://127.0.0.1:13306/jpa_db
+    url: jdbc:mariadb://localhost:13306/jpa_db
     username: jpa_user
     password: jpa_user
   jpa:
